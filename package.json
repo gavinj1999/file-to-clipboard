@@ -1,9 +1,10 @@
 {
   "name": "file-to-clipboard",
-  "displayName": "File to Clipboard",
-  "description": "Copy file contents to clipboard",
-  "version": "1.0.0",
-  "publisher": "gavin",
+  "displayName": "Copy File to Clipboard",
+  "description": "Simple right-click context menu command to copy a file to the clipboard in VSCode.",
+  "version": "1.0.1",
+  "publisher": "gavinj1999",
+  "icon": "icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/gavinj1999/file-to-clipboard"},
