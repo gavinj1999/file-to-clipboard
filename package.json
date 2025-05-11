@@ -2,7 +2,7 @@
   "name": "file-to-clipboard",
   "displayName": "File to Clipboard",
   "description": "Copy file contents to clipboard",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "publisher": "gavin",
   "repository": {
     "type": "git",
@@ -12,9 +12,6 @@
   },
   "categories": [
     "Other"
-  ],
-  "activationEvents": [
-    "onCommand:fileToClipboard.copy"
   ],
   "main": "./dist/extension.js",
   "contributes": {

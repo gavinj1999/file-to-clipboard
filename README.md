@@ -137,7 +137,7 @@ If you’re a code ninja wanting to hack on **File to Clipboard**, here’s the 
 
 ## 📜 License
 
-Do whatever you like, up to you, Feel free to use, tweak, and share the love!
+This extension is licensed under the [MIT License](LICENSE). Feel free to use, tweak, and share the love!
 
 ## 🎈 Final Words
 
