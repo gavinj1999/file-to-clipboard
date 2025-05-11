@@ -1,0 +1,98 @@
+{
+  "name": "file-to-clipboard",
+  "displayName": "File to Clipboard",
+  "description": "Copy file contents to clipboard",
+  "version": "0.0.4",
+  "publisher": "gavin",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:fileToClipboard.copy"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "fileToClipboard.copy",
+        "title": "To Clipboard"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "fileToClipboard.copy",
+          "group": "navigation",
+          "when": "resourceScheme == file"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "File to Clipboard",
+      "properties": {
+        "fileToClipboard.allowedExtensions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^\\.[a-zA-Z0-9]+$"
+          },
+          "default": [
+            ".txt",
+            ".js",
+            ".ts",
+            ".json",
+            ".md",
+            ".css",
+            ".html",
+            ".py",
+            ".java",
+            ".cpp",
+            ".c",
+            ".h",
+            ".php",
+            ".rb",
+            ".go",
+            ".sh",
+            ".yaml",
+            ".yml",
+            ".xml",
+            ".csv"
+          ],
+          "description": "List of file extensions (e.g., .txt, .js) allowed for the 'To Clipboard' command. Extensions must start with a dot and contain only letters or numbers.",
+          "scope": "resource"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^18.19.42",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "@eslint/config-array": "^0.18.0",
+    "@eslint/object-schema": "^2.1.4",
+    "eslint": "^9.11.1",
+    "typescript": "^5.5.4",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4",
+    "ts-loader": "^9.5.1",
+    "@vscode/test-cli": "^0.0.10",
+    "rimraf": "^5.0.10",
+    "glob": "^11.0.0"
+  },
+  "license": "MIT"
+}
