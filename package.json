@@ -4,6 +4,9 @@
   "description": "Copy file contents to clipboard",
   "version": "0.0.4",
   "publisher": "gavin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gavinj1999/file-to-clipboard"},
   "engines": {
     "vscode": "^1.85.0"
   },
